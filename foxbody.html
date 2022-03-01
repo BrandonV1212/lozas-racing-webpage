@@ -1,0 +1,513 @@
+<html>
+<head>
+    <title>Foxbody ~~ Loza's Racing</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0">"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Offside&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Lato', sans-serif;
+        }
+        .box-3{
+            object-fit: cover;
+            width: 100%;
+            height: 130px;
+        }
+        .front-page-bio{
+            height: 47vh;
+        }    
+        .section-1{
+            background-image: url(./img/foxbody-img.jpg);
+            background-attachment: fixed;
+            background-size: auto;
+            padding: 0;
+        }
+        .bg-gray-900{
+            --text: rgb(68, 68, 68);
+            --text-inverse: white;
+            --background: rgba(0,0,0,.8);
+
+            box-shadow: 0 3px 20px rgba(black, 0.2);
+        }
+        .text-white{
+            color: white;
+        }
+        header{
+            --background: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            background: var(--background);
+            color: var(--text);
+        }
+        .justify-between{
+            justify-content: space-between;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        .items-center{
+            align-items: center;
+        }
+        .py-8{
+         padding-top: 8px;
+         padding-bottom: 8px;
+        }
+        .px-16{
+         padding-left: 16px;
+         padding-right:16px;
+        }
+        .no-underline{
+            text-decoration: none;
+        }
+        .text-uppercase{
+            text-transform: uppercase;
+        }
+        .dev-relative{
+            position: relative;
+            right: 20px;
+            top: 25px;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+        }
+        .font-lato{
+            font-family: 'Offside', cursive;
+        }
+        .textglo{
+            color: rgb(214, 207, 207);
+            transition: all .1s linear;
+        }
+        .textglo:hover{
+            color: white;
+        }
+        .object-cover{
+        object-fit: cover;
+
+        }
+        .image{
+            position: relative; 
+            top: -14px;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+            width: 280px;
+            height: 180px; 
+            margin-left: 20px;
+        }
+        .pretty-back{
+            position: relative;
+            top: -319;
+        }
+        .contact{
+            justify-content: center;
+            width: 100%;
+            height: 78vh;
+            display: flex;
+            overflow:auto;
+            padding: 12vh 10vw;
+            box-sizing: border-box;
+            background-size: cover;
+            background-image: url(./img/dark-grey-background-2.jpg);
+            position: relative;
+        }
+        .contact h1{
+            padding-top: 40;
+            color: white;
+            font-size: 60;
+            position: absolute;
+            top: 0;
+            text-align: center;
+        }
+        .contact h2{
+            color: white;
+            font-size: 30;
+            padding-top: 5;
+            padding-bottom: 20;
+            
+        }
+        .contact li{
+            color: white;
+            font-size: 20;
+            line-height: 3;
+            
+        }
+        .number{
+            line-height: 220%;
+            color: white;
+            font-size: 24px;
+        }    
+        .front-bio{
+            position: absolute;
+            top: 280;
+            left: 25vw;
+            width: 1000px;
+            color: white;
+        }
+        .front-bio h1{
+            font-family: sans-serif; 
+            font-size: 50px; 
+            font-weight: 700; 
+            letter-spacing: -0.02em;
+            
+        }
+        .front-bio li{
+            position: relative;
+            left: -10;
+            padding: 10;
+            font-family: 'Offside', cursive;
+            font-size: 19px;
+        }
+        .footer{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding: 70px 0;
+            box-sizing: border-box;
+            background-image: url(./img/crop-back.jpg);
+        }
+        .foot{
+            color: white;
+            font-size: 18px;
+        }
+        .inner__footer{
+            display: flex;
+            margin: 0 auto;
+            width: 1100px;
+            height: 100%;
+        }
+        .footer_third img{
+            width: 15%;
+        }    
+        .inner__footer .footer_third{
+            width: calc(33.33333333333333%);
+            margin-right: 10px;
+            float: left;
+            height: 100%;
+        }
+        .inner__footer .footer_third:last-child{
+            margin-right: 0; 
+        }
+        .inner__footer .footer_third h1{
+            font-family: Arial;
+            font-size: 22px;
+            color: white;
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .inner__footer .footer_third li{
+            line-height: 150%;
+            font-family: Arial;
+            font-size: 18px;
+            color: white;
+            display: block;
+            font-weight: 200;
+            width: 100%;
+            padding-bottom: 5;
+        }
+        @media (max-width: 1208px){
+            .perf-pack{
+                height: 360vh;
+                width: 1208px;
+                display: flex;
+                overflow: auto;
+                padding: 0vh 300;
+                box-sizing: border-box;
+                background-size: cover;
+                position: relative;
+            }
+            .lg-section-1{
+                background-size: 1208px auto;
+            }
+            .front-page-2{
+                height: 60vh;
+            }
+            .perf-bio-lg{
+                position: absolute;
+                top: 0;
+                left: 15vw;
+                width: 1000px;
+                color: white;
+            }
+            .perf-bio-lg li{
+                font-size: 18px;
+            }
+            .perf-bio{
+                position: relative;
+                left: 180;
+            }
+            input[type="checkbox"]{
+            display: none;
+            }    
+        }
+        @media (max-width: 900px){
+            .perf-pack{
+                width: 900px;
+                padding: 0 170;
+            }
+            .perf-bio{
+                left: 6vw;
+            }
+            .perf-bio li{
+                font-size: 15;
+                width: 800;
+            }
+            .section-1{
+                background-size: 900px auto;
+            }
+            .front-page-bio{
+                height: 49vh;
+            }
+            .image{
+                width: 200px;
+                height: auto;
+            }
+            .perf-bio{
+                position: relative;
+                top: 140;
+            }
+        }
+        @media (min-width: 800px){
+            .hide{
+                display: none;
+            }
+        }
+        @media (max-width: 800px){
+            .bio-text{
+                font-size: 23px;
+            }
+            .perf-pack{
+                width: 100%;
+                padding: 0 100;
+            }
+            .perf-bio li{
+                width: 700;
+            }
+            .perf-bio{
+                position: relative;
+                top: 100;
+            }
+            .hidden{
+                display: none;
+            }
+            .hamburger{
+                width: 100;
+                height: auto;
+            }
+            .section-1{
+                background-size: 800px;
+            }
+            .front-page-bio{
+                height: 40vh;
+            }
+            #hamitems a {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                border-top: 1px solid #333;
+            }
+            #hamnav label { 
+                display: inline-block; 
+                color: red;
+                background: none;
+                font-style: normal;
+                font-size: 3.2em;
+                padding: 10px;
+            }
+            #hamitems { display: none; }
+            #hamnav input:checked ~ #hamitems { display: block; }
+
+        }
+        @media (max-width: 740px){
+            .perf-inner  img{
+                width: 500px;
+                height: 280px;
+            }
+            .perf-pack{
+                height: 280vh;
+                width: 100%;
+                overflow: hidden;
+                padding: 0 120;
+            }
+            .perf-bio{
+                display: none;
+            }
+            .section-1{
+                background-size: 740px;
+            }
+        }    
+        @media (max-width: 640px){
+            .section-1{
+                background-size: 640px;
+            }
+            .front-page-bio{
+                height: 33vh;
+            }
+        }
+        @media (max-width: 420px){
+            .bio-text{
+                font-size: 15;
+            }
+            .section-1{
+                background-size: 420px;
+            }
+            .front-page-bio{
+                height: 18vh;
+            }
+            .perf-bio h1{
+                font-size: 27;
+            }
+            .perf-bio li{
+                width: 360;
+                font-size: 15;
+            }
+            .perf-pack{
+                height: 245vh;
+                width: 100%;
+                overflow: hidden;
+                padding: 0 16;
+                padding-top: 170;
+            }
+            .perf-inner  img{
+                width: 390px;
+                height: 230px;
+            }
+            .inner_carbon img{
+                width: 340px;
+                height: auto;
+                margin: 0 auto;
+            }
+            .image{
+                width: 150px;
+                height: auto;
+            }
+            .contact{
+                height: 120vh;
+            }
+            .contact h1{
+                font-size: 36;
+            }    
+            .hidden{
+                display: none;
+            }
+            .footer{
+                height: 70vh;
+            }
+            .inner__footer .footer_third:last-child{
+                position: relative;
+                left: -70vw;
+                top: 20vh;
+                
+            }
+        }
+        @media (max-width: 394px){
+            .perf-pack{
+                height: 230vh;
+                padding: 120 6;
+            }
+            .perf-inner  img{
+                width: 380px;
+                height: 220px;
+            }
+            .front-page-bio{
+                height: 24vh;
+            }
+            .contact h1{
+                font-size: 36;
+            }
+            .contact{
+                height: 140vh;
+            }    
+        }                 
+        </style>
+</head>
+<body style="max-height: 0;" class="section-1">
+    <header class="justify-between" style="padding: 18px 12px;">
+        <div>
+            <a href="./index.html">      
+            <img src="./img/logo_loza.png" alt="" class="image">
+            </a> 
+        </div>
+        <nav id="hamnav">
+            
+            <label class="hide" for="hamburger">&#9776;</label>
+            <input class="hide" type="checkbox" id="hamburger"/>
+    
+            <div id="hamitems" class="hidden justify-center items-center text-uppercase dev-relative font-lato a-10" style="font-size: 18px;">
+                <a href="./index.html" class="nav-links textglo py-8 px-16 no-underline">Home</a>
+                <a href="./performance.html" class="nav-links textglo py-8 px-16 no-underline">Performance Packages</a>
+                <a href="./tuning.html" class="nav-links textglo py-8 px-16 no-underline">Tuning</a>
+                <a href="./media.html" class="nav-links textglo py-8 px-16 no-underline">media</a>
+                <a href="./aboutus.html" class="nav-links textglo py-8 px-16 no-underline">About Us</a>
+                <a href="./contact.html" class="nav-links textglo py-8 px-16 no-underline">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="front-page-bio">
+        <div class="front-bio">
+            <h1>CAMERO 93-02</h1>
+            <li></li>
+        </div>
+    </div>
+    <div class="contact">
+        <div>
+            <h1>Call Us For Pricing!!</h1>
+        </div>
+        <div>
+            <ul>
+                <h2>Have A Crazy Dream Build Call Us For Custom Work!!</h2>
+                <li>Fuel Upgrade-Fuel Pump/fuel line, e85 conversation, Carb conversation</li>
+                <li>Full Exhaust System / Headers</li>
+                <li>Full Engine Build / Engine upgrades</li>
+                <li>Cam/Head Packeges</li>
+                <li>Transmission build stage 1 stage 2 stage 3 stage 4 / Torque Converter Stall Your Choosing Call for more details</li>
+                <li>Differential build / 373 gear 410 gear etc</li>
+                <li>Suspencion</li>
+                <li>Street Tune $250</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inner__footer">
+            <div class="footer_third">
+                <h1>CONNECT WITH US</h1>
+                <a href="https://www.facebook.com/Lozas-Racing-103394785611893"><img src="./img/facebook-logo.png" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCmETTSkkZY_YO02HTZtwEfg"><img src="./img/youtube-logo.png" alt=""></a>
+                <a href="https://twitter.com/RacingLoza"><img src="./img/twitter-logo.png" alt=""></a>
+                <a href="https://www.instagram.com/franciscoloza1980/"><img src="./img/insta-logo.png" alt=""></a>
+            </div>
+    
+            <div class="footer_third">
+                <h1>COMPANY</h1>
+                <a class="foot" href="./aboutus.html">About Us</a>
+                <a class="foot" href="./suspension.html">Media</a>
+            </div>
+    
+             <div class="footer_third">
+                <h1>SERVICES</h1>
+                <a class="foot" href="tel:+14693719634">(469)371-9634</a>
+                <li>franciscoloza1980@gmail.com</li>
+                <li>Monday -Thursday : 12pm - 6PM</li>
+                <li>Friday : 12AM - 6PM</li>
+                <li>Saturday : 9AM-4PM (By Appointment Only)</li>
+                <li>Sunday : ( Closed )</li>
+             </div>
+        </div>
+    </div>
+<script src="./observers.js"></script>
+</body>
+</html>

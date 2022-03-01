@@ -1,0 +1,668 @@
+<html>
+<head>
+    <title>Home ~~ Loza's Racing</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Offside&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Lato', sans-serif;
+        }
+        .box-3{
+            object-fit: cover;
+            width: 100%;
+            height: 130px;
+        }
+        .section-1{
+            background-image: url(./img/C10_cover-2.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 0;
+            
+        }
+
+        .section-2{
+            width: 100%;
+            display: flex;
+            overflow: visible;
+            padding: 90px 0;
+            box-sizing: border-box;
+            background-size: cover;
+            background: url(./img/muilti-mods2.png);  
+        }
+        .socials{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 90px 24vw;
+            box-sizing: border-box;
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url(./img/camero-crop\ copy.jpg);
+            position: relative;
+        }
+        .social img{
+            width: 200;
+            -webkit-filter: grayscale(100%) !important;
+            filter: grayscale(100%) !important;
+        }
+        .social__inner .social img:hover{
+            -webkit-filter: grayscale(0) !important;
+            filter: grayscale(0) !important;
+        }    
+        .social__inner :nth-child(2){
+            display: inline-block;
+        }
+        .social__inner :nth-child(3){
+            display: inline-block;
+        }
+        .social__inner :nth-child(4){
+            display: inline-block;
+        }
+        .social__inner :nth-child(5){
+            display: inline-block;
+        }
+        .social__inner h1{
+            position: absolute;
+            top: 0px;
+            left: 30vw;
+            color: white;
+            font-weight: 750;
+            max-width: 300px;
+            padding: 10px; 
+            border: 2px;
+            font-size: 35px; 
+            font-family: sans-serif;
+        }
+        .bg-gray-900{
+            --text: rgb(68, 68, 68);
+            --text-inverse: white;
+            --background: rgba(0,0,0,.8);
+
+            box-shadow: 0 3px 20px rgba(black, 0.2);
+        }
+        .text-white{
+            color: white;
+        }
+        header{
+            --background: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            background: var(--background);
+            color: var(--text);
+        }
+        .justify-between{
+            justify-content: space-between;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        .items-center{
+            align-items: center;
+        }
+        .py-8{
+         padding-top: 8px;
+         padding-bottom: 8px;
+        }
+        .px-16{
+         padding-left: 16px;
+         padding-right:16px;
+        }
+        .no-underline{
+            text-decoration: none;
+        }
+        .text-uppercase{
+            text-transform: uppercase;
+        }
+        .dev-relative{
+            position: relative;
+            right: 20px;
+            top: 25px;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+        }
+        .font-lato{
+            font-family: 'Offside', cursive;
+        }
+        .image{
+            position: relative; 
+            top: -14px;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+            width: 280px;
+            height: 180px; 
+            margin-left: 20px;
+        }
+        .textglo{
+            color: rgb(214, 207, 207);
+            transition: all .1s linear;
+        }
+        .textglo:hover{
+            color: white;
+        }
+        .object-cover{
+        object-fit: cover;
+
+        }
+        .pretty-back{
+            position: relative;
+            top: -319;
+        }
+        .carbon{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding: 70px 16vw;
+            box-sizing: border-box;
+            background-size: cover;
+            background-image: url(./img/carbon-fiber1.jpg);
+            position: relative;
+
+        }
+        .inner_carbon img{
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .inner_carbon :nth-child(1){
+            display: inline-block;
+            position: relative;
+            left: -20;
+        }
+        .inner_carbon :nth-child(2){
+            display: inline-block;
+            position: relative;
+            top: -30;
+            left: 20;
+        }
+        .footer{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding: 70px 0;
+            box-sizing: border-box;
+            background-image: url(./img/crop-back.jpg);
+        }
+        .foot{
+            color: white;
+            font-size: 18px;
+        }    
+        .inner__footer{
+            display: flex;
+            margin: 0 auto;
+            width: 1100px;
+            height: 100%;
+        }
+        .footer_third img{
+            width: 15%;
+        }
+        .inner__footer .footer_third{
+            width: calc(33.33333333333333%);
+            margin-right: 10px;
+            float: left;
+            height: 100%;
+        }
+        .inner__footer .footer_third:last-child{
+            margin-right: 0; 
+        }
+        .inner__footer .footer_third h1{
+            font-family: Arial;
+            font-size: 22px;
+            color: white;
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .inner__footer .footer_third li{
+            font-family: Arial;
+            font-size: 18px;
+            color: white;
+            display: block;
+            font-weight: 200;
+            width: 100%;
+            padding-bottom: 5;
+        }
+        .perf-pack{
+            width: 100%;
+            height: 153vh;
+            display: flex;
+            overflow:auto;
+            padding: 0vh 0;
+            box-sizing: border-box;
+            background-size: cover;
+            background-image: url(./img/dark-grey-background.jpg);
+            position: relative;
+        }
+        .perf-inner{
+            padding-top: 27vh;
+            margin: 0 auto;
+        }
+        .perf-inner  img{
+            width: 600px;
+            height: 380px; 
+        }
+        .perf-1 :nth-child(1){
+            display: inline-block;
+        }    
+        .perf-1 :nth-child(2){
+            display: inline-block;
+        }    
+        .perf-1 :nth-child(3){
+            display: inline-block;
+        }
+        .perf-2 :nth-child(1){
+            display: inline-block;
+        }
+        .perf-2 :nth-child(2){
+            display: inline-block;
+        }
+        .perf-2 :nth-child(3){
+            display: inline-block;
+        }
+        .perf-bio{
+            position: absolute;
+            top: 0;
+            left: 25vw;
+            width: 1000px;
+            color: white;
+        }
+        .perf-bio h1{
+            font-family: sans-serif; 
+            font-size: 50px; 
+            font-weight: 700; 
+            letter-spacing: -0.02em;
+            
+        }
+        .perf-bio li{
+            position: relative;
+            left: -10;
+            padding: 10;
+            font-family: 'Offside', cursive;
+            font-size: 19px;
+
+        }
+        .muli-img{
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding: 70px 0;
+            box-sizing: border-box;
+            background-size: cover;
+            background-image: url(./img/new-muli-photo2.png);
+        }
+        .bio-text{
+            font-family: 'Offside', cursive;;
+            font-size: 30px;
+            color: white;
+            padding-top: -200vh;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding: 40 20vw;
+            box-sizing: border-box;
+            background-image: url(./img/background2-2.jpg);
+        }
+        .front-page-bio{
+            height: 100vh;
+        }
+        @media (max-width: 1208px){
+            .perf-pack-lg{
+                height: 360vh;
+                width: 1208px;
+                display: flex;
+                overflow: auto;
+                padding: 0vh 300;
+                box-sizing: border-box;
+                background-size: cover;
+                position: relative;
+            }
+            .lg-section-1{
+                background-size: 1208px auto;
+            }
+            .front-page-2{
+                height: 60vh;
+            }
+            .perf-bio-lg{
+                position: absolute;
+                top: 0;
+                left: 15vw;
+                width: 1000px;
+                color: white;
+            }
+            .perf-bio-lg li{
+                font-size: 18px;
+            }
+            input[type="checkbox"]{
+            display: none;
+            }    
+        }
+        @media (max-width: 900px){
+            .perf-pack{
+                width: 900px;
+                padding: 0 170;
+            }
+            .perf-bio{
+                left: 6vw;
+            }
+            .perf-bio li{
+                font-size: 15;
+                width: 800;
+            }
+            .section-1{
+                background-size: 900px auto;
+            }
+            .front-page-bio{
+                height: 49vh;
+            }
+            .image{
+                width: 200px;
+                height: auto;
+            }
+        }
+        @media (min-width: 800px){
+            .hide{
+                display: none;
+            }
+        }
+        @media (max-width: 800px){
+            .bio-text{
+                font-size: 23px;
+            }
+            .perf-pack{
+                width: 100%;
+                padding: 0 100;
+            }
+            .perf-bio li{
+                width: 700;
+            }
+            .hidden{
+                display: none;
+            }
+            .hamburger{
+                width: 100;
+                height: auto;
+            }
+            .section-1{
+                background-size: 800px;
+            }
+            .front-page-bio{
+                height: 40vh;
+            }
+            #hamitems a {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                border-top: 1px solid #333;
+            }
+            #hamnav label { 
+                display: inline-block; 
+                color: red;
+                background: none;
+                font-style: normal;
+                font-size: 3.2em;
+                padding: 10px;
+            }
+            #hamitems { display: none; }
+            #hamnav input:checked ~ #hamitems { display: block; }
+
+        }
+        @media (max-width: 740px){
+            .perf-bio li{
+                font-size: 14;
+                width: 600;
+            }
+            .perf-bio h1{
+                font-size: 40px;
+            }
+            .perf-inner  img{
+                width: 500px;
+                height: 280px;
+            }
+            .perf-pack{
+                height: 280vh;
+                width: 100%;
+                overflow: hidden;
+                padding: 0 120;
+            }
+            .section-1{
+                background-size: 740px;
+            }
+        }    
+        @media (max-width: 640px){
+            .section-1{
+                background-size: 640px;
+            }
+            .front-page-bio{
+                height: 33vh;
+            }
+        }
+        @media (max-width: 420px){
+            .bio-text{
+                font-size: 15;
+            }
+            .section-1{
+                background-size: 420px;
+            }
+            .front-page-bio{
+                height: 20vh;
+            }
+            .perf-bio h1{
+                font-size: 27;
+            }
+            .perf-bio li{
+                width: 360;
+                font-size: 15;
+            }
+            .perf-pack{
+                height: 245vh;
+                width: 100%;
+                overflow: hidden;
+                padding: 0 16;
+                padding-top: 170;
+            }
+            .perf-inner  img{
+                width: 390px;
+                height: 230px;
+            }
+            .inner_carbon img{
+                width: 340px;
+                height: auto;
+                margin: 0 auto;
+            }
+            .image{
+                width: 150px;
+                height: auto;
+            }
+            .hidden{
+                display: none;
+            }
+            .footer{
+                height: 70vh;
+            }
+            .inner__footer .footer_third:last-child{
+                position: relative;
+                left: -70vw;
+                top: 20vh;
+                
+            }
+        }
+        @media (max-width: 394px){
+            .perf-pack{
+                height: 230vh;
+                padding: 120 6;
+            }
+            .perf-inner  img{
+                width: 380px;
+                height: 220px;
+            }    
+        }   
+        </style>
+</head>
+<body class="section-1 lg-section-1">
+<header class="justify-between" style="padding: 18px 12px;">
+    <div>
+        <a href="./index.html">      
+        <img src="./img/logo_loza.png" alt="" class="image">
+        </a> 
+    </div>
+    <nav id="hamnav">
+        
+        <label class="hide" for="hamburger">&#9776;</label>
+        <input class="hide" type="checkbox" id="hamburger"/>
+
+        <div id="hamitems" class="hidden justify-center items-center text-uppercase dev-relative font-lato a-10" style="font-size: 18px;">
+            <a href="./index.html" class="nav-links textglo py-8 px-16 no-underline">Home</a>
+            <a href="./performance.html" class="nav-links textglo py-8 px-16 no-underline">Performance Packages</a>
+            <a href="./tuning.html" class="nav-links textglo py-8 px-16 no-underline">Tuning</a>
+            <a href="./media.html" class="nav-links textglo py-8 px-16 no-underline">media</a>
+            <a href="./aboutus.html" class="nav-links textglo py-8 px-16 no-underline">About Us</a>
+            <a href="./contact.html" class="nav-links textglo py-8 px-16 no-underline">Contact</a>
+        </div>
+    </nav>
+</header>
+<div class="front-page-bio front-page-2"></div>
+<div class="bio-text">
+    <p>Loza's performance has been building and swaping engine for years working on customs to drag and street. With best competive tuning, We build your goals so know matter what you bring we can unleach the potential in your vehicle today with Loza's Racing! We provide high-performance enhancements for your vehicle with as much emphasis on drivability and reliability as there is on power and speed.</p>
+</div>
+<div class="muli-img hidden"></div>
+<div class="perf-pack perf-pack-lg">
+    <div class="perf-bio perf-bio-lg">
+        <h1>PERFORMANCE PACKAGES</h1>
+        <li>Loza's Racing offers a variety of today’s high-performance vehicles.  We have taken the time to thoroughly design and test these packages on our own R&D vehicles that we purchase to ensure that our customer is provided with not only more horsepower and torque than ever before, but also with other supporting modifications that ensure reliability as well as great manners at part throttle as well as wide open throttle. These packages are the foundation for our performance upgrade offerings here in house, but are also 100% customizable to meet our customer’s individual goals and needs.</li>
+    </div>
+    <div class="perf-inner">
+        <div class="perf-1">
+            <div class="cam-4th">  
+                <a href="./9302camero.html">
+                <img src="./img/camero-4th copy.png" alt="">
+                </a>
+            </div>
+
+            <div class="cam-5th">            
+                <a href="./1015camero.html">
+                <img src="./img/camero-img-Recovered.png" alt="">
+                </a>
+            </div>
+
+            <div class="classic">            
+                <a href="./classic.html">
+                <img src="./img/classinc-car-img copy.png" alt="">
+                </a>
+        </div>
+        </div>
+        <div class="perf-2">
+            <div style="display: inline-block;" class="corvette">            
+                <a href="./0613corvette.html">
+                <img src="./img/corvette-img copy.png" alt="">
+                </a>
+            </div>
+
+            <div style="display: inline-block;" class="foxbody">            
+                <a href="./foxbody.html">
+                <img src="./img/foxbody-img copy.png" alt="">
+                </a>
+            </div>
+
+            <div style="display: inline-block;" class="gm-truck">            
+                <a href="./gmtruck.html">
+                <img src="./img/gmtruck-img copy.png" alt="">
+                </a>
+            </div>
+        
+            <div class="mustang">            
+                <a href="./9404mustang.html">
+                <img src="./img/mustang-04-img copy.png" alt="">
+                </a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="section-2 hidden"></div>
+<div class="socials">
+    <div class="social__inner">
+        <div>
+            <h1>LOZA'S SOCIAL</h1>
+        </div>
+        <div class="social">            
+            <a href="https://www.facebook.com/Lozas-Racing-103394785611893">
+            <img src="./img/facebook-logo.png" alt="">
+            </a>
+        </div>
+        <div class="social">            
+            <a href="https://www.youtube.com/channel/UCmETTSkkZY_YO02HTZtwEfg">
+            <img src="./img/youtube-logo.png" alt="">
+            </a>
+        </div>
+        <div class="social">            
+            <a href="https://twitter.com/RacingLoza">
+            <img src="./img/twitter-logo.png" alt="">
+            </a>
+        </div>
+        <div class="social">            
+            <a href="https://www.instagram.com/franciscoloza1980/">
+            <img src="./img/insta-logo.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="carbon">
+    <div class="inner_carbon">
+        <div class="logo_ford">
+            <img src="./img/FORD-rac.png" alt="">
+        </div>
+        <div class="logo_lsx">
+            <img src="./img/LSX-raci-img.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="inner__footer">
+        <div class="footer_third">
+            <h1>CONNECT WITH US</h1>
+            <a href="https://www.facebook.com/Lozas-Racing-103394785611893"><img src="./img/facebook-logo.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCmETTSkkZY_YO02HTZtwEfg"><img src="./img/youtube-logo.png" alt=""></a>
+            <a href="https://twitter.com/RacingLoza"><img src="./img/twitter-logo.png" alt=""></a>
+            <a href="https://www.instagram.com/franciscoloza1980/"><img src="./img/insta-logo.png" alt=""></a>
+        </div>
+
+        <div class="footer_third">
+            <h1>COMPANY</h1>
+            <a class="foot" href="./aboutus.html">About Us</a>
+            <a class="foot" href="./suspension.html">Media</a>
+        </div>
+
+         <div class="footer_third">
+            <h1>SERVICES</h1>
+            <li>(469)371-9634</li>
+            <li>franciscoloza1980@gmail.com</li>
+            <li>Monday -Thursday : 12pm - 6PM</li>
+            <li>Friday : 12AM - 6PM</li>
+            <li>Saturday : 9AM-4PM (By Appointment Only)</li>
+            <li>Sunday : ( Closed )</li>
+         </div>
+    </div>
+</div>
+<script src="./app.js"></script>
+<script src="./observers.js"></script>
+</body>
+</html>
